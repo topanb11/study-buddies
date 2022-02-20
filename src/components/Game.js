@@ -49,6 +49,7 @@ export default function Game() {
             <ProgressBar correct={questionCount}/>
             {questionCount != 10 && <h3>Question {questionCount + 1}:</h3>}
             {questionCount != 10 && <p>{mapQ[questionCount]}</p>}
+            {questionCount != 10 && <h3>Current score: {100 * score}pts</h3>}
             {questionCount == 0 && 
                 <form onSubmit={handleSubmit}>
                 <label>Answer: </label>
