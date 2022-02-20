@@ -10,7 +10,7 @@ export default function Game() {
     const [questionCount, setQuestionCount] = useState(0)
     const [score, setScore] = useState(0)
     const keyStroke = []
-    const scuffedAnswers = []
+    var scuffedAnswers = []
     var i = 0
     var j = 0
 
@@ -26,12 +26,20 @@ export default function Game() {
     );
     
     function handleSubmit(event) {
+        event.preventDefault() 
         scuffedAnswers.push(keyStroke[i - 1])
-        if(scuffedAnswers[j].toLowerCase() == mapA[j])
+        scuffedAnswers[questionCount]
+        if(scuffedAnswers[j].toLowerCase() == mapA[questionCount]){
             increaseScore()
+        }
+        console.log(scuffedAnswers[j])
+        console.log(mapA[questionCount])
+        console.log(questionCount)
+
+            
         setQuestionCount(count => count + 1)
         console.log(score)
-        event.preventDefault()    
+           
     }
 
     function handleChange(event) {
