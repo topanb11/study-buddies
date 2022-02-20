@@ -1,8 +1,11 @@
 import React from "react"
 
-export default function Result() {
+export default function Result(props) {
     
     return(
-        <h3>result screen</h3>
+        <div>
+            <h2>GOOD JOB</h2>
+            <p>Your score was poop poop!</p>
+        </div>
     )
 }
