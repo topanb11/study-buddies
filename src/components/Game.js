@@ -31,14 +31,8 @@ export default function Game() {
         if(scuffedAnswers[j].toLowerCase() == mapA[questionCount]){
             increaseScore()
         }
-        console.log(scuffedAnswers[j])
-        console.log(mapA[questionCount])
-        console.log(questionCount)
-
             
         setQuestionCount(count => count + 1)
-        console.log(score)
-           
     }
 
     function handleChange(event) {
