@@ -30,6 +30,11 @@
     left: -25px;
 }
 
+.navbar > img {
+    width: 120px;
+    padding: 40px;
+}
+
 .logo{
     position: relative;
     width: 200px;
