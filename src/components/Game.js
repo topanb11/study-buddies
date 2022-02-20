@@ -28,7 +28,6 @@ export default function Game() {
     function handleSubmit(event) {
         event.preventDefault() 
         scuffedAnswers.push(keyStroke[i - 1])
-        scuffedAnswers[questionCount]
         if(scuffedAnswers[j].toLowerCase() == mapA[questionCount]){
             increaseScore()
         }
