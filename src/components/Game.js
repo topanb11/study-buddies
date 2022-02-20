@@ -1,9 +1,24 @@
 import React, { useState } from "react"
 import ProgressBar from "./ProgressBar"
 import Result from "./Result"
-import question from "./questions"
+import db from "./firebase"
+import { useEffect } from "react"   
+import { onSnapshot, collection } from "firebase/firestore"
 
 export default function Game() {
+    const [questions, setQuestions] = useState([])
+
+    useEffect(
+        () => 
+        onSnapshot(collection(db, "testQuestion"), (snapshot) => 
+            setQuestions(snapshot.docs.map((doc) => doc.data()))
+        ),
+     []
+    );
+
+    
+
+
 
     const[questionCount, setQuestionCount] = useState(0)
 
