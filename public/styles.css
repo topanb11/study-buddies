@@ -37,13 +37,13 @@
 
 .body--main{
     background-color: #94B49F;
-    height: 80vh;
+    height: 77vh;
     text-align: center;
 }
 
 .body--content{
     position: relative;
-    padding-top: 10vh;
+    padding-top: 9vh;
     align-items: center;
 }
 
