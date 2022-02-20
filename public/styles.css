@@ -85,7 +85,7 @@
     border: black solid 2px;
     border-radius: 10px;
     width: 40vw;
-    height: 20vh;
+    height: 22vh;
     text-align: center;
     padding: 25px;
     margin: 0 auto;
@@ -119,6 +119,7 @@
     background-color: #789395;
     text-align: center;
     padding: 3vh;
+    height: 2vh;
 }
 
 @media screen and (max-width: 1920px){

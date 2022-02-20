@@ -173,7 +173,8 @@ export default function Game() {
             {questionCount == 10 && 
                 <div>
                     <h2>Good job!</h2>
-                    <p>Your score is: {score}/10!</p>
+                    <p>You got: {score}/10 correct!
+                        Your score was {100 * score}pts </p>
                 </div>    
             }
 
