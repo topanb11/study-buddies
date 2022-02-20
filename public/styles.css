@@ -25,14 +25,15 @@
 }
 
 .navbar > h1 {
+    position: relative;
     font-size: 3em;
+    left: -25px;
 }
 
 .logo{
     position: relative;
-    width: 130px;
+    width: 200px;
     padding: 0;
-    margin-right: 26vw;
 }
 
 .body--main{
@@ -44,11 +45,7 @@
 .body--content{
     position: relative;
     padding-top: 9vh;
-    align-items: center;
-}
-
-.body--content{
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .body--play{
@@ -59,7 +56,7 @@
     border: none;
     margin: 25px;
     padding: 5px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     box-shadow: 5px 3px black;
     text-align: center;
@@ -83,7 +80,8 @@
     position: relative;
     border: black solid 2px;
     border-radius: 10px;
-    width: 30vw;
+    width: 40vw;
+    height: 20vh;
     text-align: center;
     padding: 25px;
     margin: 0 auto;
@@ -92,6 +90,7 @@
 
 .game > p{
     margin-top: 15px;
+    width: 40vw;
 }
 
 .game > form{
@@ -106,6 +105,6 @@
 .footer{
     background-color: #789395;
     text-align: center;
-    padding: 20px;
+    padding: 3vh;
 }
 
