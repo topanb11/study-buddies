@@ -1,30 +1,32 @@
 import React, { useState } from "react"
-import Body from "./Body"
 import ProgressBar from "./ProgressBar"
-
-
+import Result from "./Result"
+import question from "./questions"
 
 export default function Game() {
 
-    const[question, setQuestion] = useState(0)
+    const[questionCount, setQuestionCount] = useState(0)
 
     function handleSubmit(event) {
         event.preventDefault()
-        setQuestion(prevQuestion => prevQuestion + 1)
+        setQuestionCount(prevQuestion => prevQuestion + 1)
+        
     }
-
 
     return(
         <div className="game">
-            <ProgressBar question={question}/>
+            <ProgressBar correct={questionCount}/>
             
-            <h3>Question 1:</h3>
-            <p>QUESTION QUESTION QUESTION QUESTION</p>
-
-            <form onSubmit={handleSubmit}>
+        
+            {questionCount != 10 && <h3>Question {questionCount + 1}:</h3>}
+            {questionCount != 10 && <p>lool</p>}
+            {questionCount != 10 && <form onSubmit={handleSubmit}>
                 <label>Answer: </label>
-                <input type="text"></input>
-            </form>
-        </div>
+                <input type="text" placeholder="Enter your answer"></input>
+            </form>}
+            
+            {questionCount == 10 && <Result />}
+
+        </div>   
     )
 }
