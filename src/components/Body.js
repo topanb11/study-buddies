@@ -8,19 +8,22 @@ export default function Body() {
 
     function displayGame() {
        setGame(prevGame => !prevGame)
+
     }
 
     return(
         <div className="body--main">
             <div className="body--content">
-                <h2>Welcome to studyBuddies!</h2>
-                <p>App description jajajaj play our flashcard game</p>
+
+                {!game && <h2>Welcome to studyBuddies!</h2>}
+                {!game && <p>App description jajajaj play our flashcard game</p>}
                 {game && <Game />}
+
                 <button 
                     className="body--play"
                     onClick={displayGame}
                 >
-                    Play
+                    {game? "Reset" : "Play"}
                 </button>
             </div>
         </div>
